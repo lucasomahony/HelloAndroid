@@ -2,7 +2,6 @@ package com.example.helloandroid
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import com.example.helloandroid.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(){
@@ -15,21 +14,13 @@ class MainActivity : AppCompatActivity(){
         val view = binding.root
         setContentView(view)
 
-        binding.btnGreet.setOnClickListener(object: View.OnClickListener{
-            override fun onClick(v: View?){
-                if (v?.equals(binding.btnGreet) == true) {
-                    binding.tvGreeting.text = getString(R.string.button_pressed_message)
-                }
-            }
-        })
+        binding.btnGreet.setOnClickListener {
+            binding.tvGreeting.text = getString(R.string.button_pressed_message)
+        }
 
-        binding.btnGreet.setOnClickListener(object: View.OnClickListener{
-            override fun onClick(v: View?){
-                if (v?.equals(binding.button2) == true) {
-                    binding.tvGreeting.text = getString(R.string.button2_pressed_message)
-                }
-            }
-        })
+        binding.button2.setOnClickListener {
+            binding.tvGreeting.text = getString(R.string.button2_pressed_message)
+        }
 
     }
 }
