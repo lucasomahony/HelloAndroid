@@ -9,7 +9,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var binding: ActivityMainBinding
 
     override fun onClick(v: View?) {
-        binding.tvGreeting.text = getString(R.string.button_pressed_message)
+        if (v?.equals(binding.btnGreet) == true) {
+            binding.tvGreeting.text = getString(R.string.button_pressed_message)
+        }
+        if (v?.equals(binding.button2) == true) {
+            binding.tvGreeting.text = getString(R.string.button2_pressed_message)
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
