@@ -20,5 +20,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         binding.btnGreet.setOnClickListener(this)
 
+        binding.btnGreet.setOnClickListener(this) // how do I do this?
+
     }
 }
