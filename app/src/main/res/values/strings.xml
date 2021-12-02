@@ -3,4 +3,5 @@
     <string name="hello_android">Hello Android</string>
     <string name="press_me">Press me</string>
     <string name="button_pressed_message">You pressed a button</string>
+    <string name="button2_pressed_message">Button</string>
 </resources>
