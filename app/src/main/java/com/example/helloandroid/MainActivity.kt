@@ -14,16 +14,13 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        binding.btnGreet.setOnClickListener({ view ->
-            run {
-                binding.tvGreeting.text = getString(R.string.button_pressed_message)
-            }
-        })
-        binding.button2.setOnClickListener({ view ->
-            run {
-                binding.tvGreeting.text = getString(R.string.button2_pressed_message)
-            }
-        })
+        binding.btnGreet.setOnClickListener {
+            binding.tvGreeting.text = getString(R.string.button_pressed_message)
+        }
+
+        binding.button2.setOnClickListener {
+            binding.tvGreeting.text = getString(R.string.button2_pressed_message)
+        }
     }
 }
 
